@@ -54,7 +54,7 @@ if st.button("Generate QR Code"):
             img_base64 = get_image_as_base64(img)
 
             st.markdown(f"##### {content}")
-            st.image(img_bytes, caption=f"QR code for {content}", use_column_width=True)
+            st.image(img_bytes, caption=f"QR code for {content}", use_container_width=True)
             file_name = get_url_filename(content)
             st.markdown(f'<a href="data:image/png;base64,{img_base64}" download="{file_name}.png" style="display:inline-block;background-color:#4CAF50;border:none;color:white;padding:8px 16px;text-align:center;text-decoration:none;font-size:16px;margin:4px 2px;cursor:pointer;">Download QR code</a>', unsafe_allow_html=True)
     else:
